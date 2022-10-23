@@ -9,6 +9,7 @@ import { router as authRouter } from './routes/auth.js'
 
 import './config/database.js'
 
+
 const app = express()
 
 app.use(cors())
