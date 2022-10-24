@@ -1,9 +1,6 @@
-import { Review } from "../models/review";
+import { Review } from "../models/review.js";
 
 function create (req, res) {
-  for (let key in req.body) {
-    if(req.body[key] === '') delete req.body[key]
-  }
   Review.create(req.body)
   .then(review => {
     res.json(review)
@@ -34,9 +31,6 @@ function deleteReveiw (req, res) {
   })
 }
 function updateReview (req, res) {
-  for (let key in req.body) {
-    if(req.body[key] === '') delete req.body[key]
-  }
   Review.findByIdAndUpdate(req.params.id, req.body, {new: true})
   .then(updatedReview => {
     res.json(updatedReview)
