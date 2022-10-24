@@ -1,7 +1,18 @@
-import { Inventory } from "../models/inventory";
+import { Inventory } from "../models/inventory.js";
 
 function create(req, res) {
   Inventory.create(req.body)
+  .then(inventory => {
+    res.json(inventory)
+  })
+  .catch(err => {
+    console.log(err);
+    res.json(err)
+  })
+}
+
+function index(req, res) {
+  Inventory.find({})
   .then(inventory => {
     res.json(inventory)
   })
@@ -35,6 +46,7 @@ function updateInventory(req, res) {
 
 export {
   create,
+  index,
   deleteInventory as delete,
   updateInventory as update
 }
