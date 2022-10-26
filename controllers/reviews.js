@@ -1,8 +1,10 @@
 import { Review } from "../models/review.js";
 
 function create (req, res) {
+  req.body.customer  = req.user.profile
   Review.create(req.body)
   .then(review => {
+    console.log('review', review)
     res.json(review)
   })
   .catch(err => {
@@ -20,7 +22,17 @@ function index (req, res) {
     res.json(err)
   })
 }
-function deleteReveiw (req, res) {
+
+const show = async (req, res) => {
+  try {
+    const review = await Review.findById(req.params.id)
+    res.status(200).json(review)
+  } catch (err) {
+    res.status(500).json(err)
+  }
+}
+
+function deleteReview (req, res) {
   Review.findByIdAndDelete(req.params.id)
   .then(deletedReview => {
     res.json(deletedReview)
@@ -44,6 +56,7 @@ function updateReview (req, res) {
 export {
   create,
   index,
-  deleteReveiw as delete,
+  deleteReview as delete,
   updateReview as update,
+  show,
 }
