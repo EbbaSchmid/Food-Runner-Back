@@ -1,5 +1,4 @@
-import { Profile } from "../models/profile"
-import { Order } from "../models/order";
+import { Order } from '../models/order.js';
 
 function index(req, res) {
   Order.find({})
@@ -9,6 +8,7 @@ function index(req, res) {
   .catch(err => {
     console.log(err)
     res.json(err)
+    
   })
 }
 
@@ -27,6 +27,7 @@ function show(req, res) {
 //req.body.beverages = [{ObjectId}]
 function create(req, res) {
   req.body.customer = req.user.profile
+  console.log('hello')
   Order.create(req.body)
   .then(order => {
     res.json(order)
@@ -37,13 +38,8 @@ function create(req, res) {
   })
 }
 
-function show(req, res) {}
-function index(req, res) {}
-function addOrder(req, res) {}
-
 export {
   create,
   show,
   index,
-  addOrder
 }

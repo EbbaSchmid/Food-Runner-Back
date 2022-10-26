@@ -24,8 +24,8 @@ function index(req, res) {
 
 function deleteInventory(req, res) {
   Inventory.findByIdAndDelete(req.params.id)
-  .then(inventoryPuppy => {
-    res.json(inventoryPuppy)
+  .then(inventory => {
+    res.json(inventory)
   })
   .catch(err => {
     console.log(err);
