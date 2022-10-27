@@ -23,11 +23,7 @@ function show(req, res) {
   })
 }
 
-//req.body.pizzas = [[{ObjectId}]]
-//req.body.beverages = [{ObjectId}]
 function create(req, res) {
-  //req.body.customer = req.user.profile
-  //console.log('hello')
   Order.create(req.body)
   .then(order => {
     res.json(order)
