@@ -1,73 +1,49 @@
-# Decoupled MERN Stack with JWT Auth Template - Back End
+Pizza Pirates by Food Runners - BACK END
 
-This is the back end of a decoupled MERN Stack app that includes JWT Authentication.
+When combined with the front end found (), you'll have all you need to run the Pizza Pirates app!
 
-When combined with the front end found [here](https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-front-end), you'll have all you need to build a full stack MERN app!
+---------------------------------------------------------------
 
-Use this to go build things! 🚀
+**Overview:**
+- Welcome to the food ordering solution for your Food Truck/Cart business brought to you by Food Runners. If you have a small kitchen crew and long customer lines, this is the app for you!
 
-## To Use This Template
+- Your customers can now order directly to you, making sure the kitchen receives the order items correctly. 
 
-**Replace `<name-of-your-app-here>` in the commands below with the name of your app!**
+- Not only is this app now your server for the front-of-house, but the kitchen can keep track of ingredient inventory to automatically have your menu up-to-date.
 
-```bash
-git clone https://github.com/SEI-Remote/decoupled-mern-jwt-auth-template-back-end <name-of-your-app-here>-back-end
-cd <name-of-your-app-here>-back-end
-code .
-```
+---------------------------------------------------------------
 
-With the project open in VS Code, open a terminal and run:
+**Technology Used & Sources:**
 
-```bash
-rm -rf .git
-```
+- VS Code, GitHub, CSS, Javascript, HTML, Whimsical, Express, MonogoDB, Mongoose, Bootstrap
 
-Here's what your command line output should like after this step (note that the indicator that we are in a git repository is gone!)
+- Trello Link: https://trello.com/b/EBaiTcQU/food-runner
 
-<img src="https://i.imgur.com/L47kNOZ.png" alt="The command line before and after running the rm -rf .git command. Before git:(main) is visible indiating that the directory contains a git repository, after the command it is not.">
+---------------------------------------------------------------
 
-Re-initialize a git repository:
+**Screen Shots of Deployed App:**
+<!-- ![Deployed App photos](assets/"Deployed App photos")
+![Deployed App photos](assets/ "Deployed App photos")
+![Deployed App photos](assets/ "Deployed App photos") -->
 
-```bash
-git init
-```
+---------------------------------------------------------------
 
-Create a repo for this project on GitHub and add that remote to your project with:
+**Wireframe Mock-Up Photos:**
+![WireFrame Setup Img](assets/WireFrame.jpg)
 
-```bash
-git remote add origin your-repo-URL-here
-```
+---------------------------------------------------------------
 
-Run npm i to fetch the template's dependencies:
+**ERD Layout:**
+![ERD layout Img](assets/ERD.jpg)
 
-```bash
-npm i
-```
+---------------------------------------------------------------
 
-touch a .env file:
-
-```bash
-touch .env
-```
-
-Fill it with the following:
-
-```
-DATABASE_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-SECRET=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-CLOUDINARY_URL=XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
-```
-
-Replace the `DATABASE_URL`, `SECRET`, and `CLOUDINARY_URL` with values that you provide.
-
-> 🚨 Place secrets in this `.env` file. The contents of this file WILL NOT be exposed to site visitors.
-
-Delete this README.md, then make an initial commit:
-
-```bash
-git add .
-git commit -m "initial commit"
-git push origin main
-```
-
-You're done!
+**Future Developments:**
+- Expand the app for multiple businesses to use
+- Adding a map of food trucks in the area 
+- AAU I want to allow my guests to schedule pizzas ahead of time
+- AAU I want to see a timer when an order is received to keep track of guests waiting time
+- AAU I want my guests to be able to save payment information
+- AAU I want my guests to see past orders
+- AAU I want to offer payment options to guests
+- AAU I want to be able to put different toppings on each side of the pizza
