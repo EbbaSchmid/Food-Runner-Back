@@ -26,6 +26,7 @@ function index (req, res) {
 const show = async (req, res) => {
   try {
     const review = await Review.findById(req.params.id)
+      .populate('customer')
     res.status(200).json(review)
   } catch (err) {
     res.status(500).json(err)

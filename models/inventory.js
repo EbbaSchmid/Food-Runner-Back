@@ -9,9 +9,14 @@ const inventorySchema = new Schema({
   type: {type: String, enum: ['crust', 'ingredient', 'beverages']}
 },{
   timestamps: true,
+  toJSON: {
+    virtuals: true,
+  },
+  toObject: {
+    virtuals: true,
+  }
+
 })
-
-
 
 const Inventory = mongoose.model('Inventory', inventorySchema)
 

@@ -22,6 +22,10 @@ function index(req, res) {
   })
 }
 
+
+
+
+
 function deleteInventory(req, res) {
   Inventory.findByIdAndDelete(req.params.id)
   .then(inventory => {
