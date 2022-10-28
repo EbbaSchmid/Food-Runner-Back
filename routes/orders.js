@@ -6,6 +6,7 @@ const router = Router()
 
 /*---------- Protected Routes ----------*/
 router.use(decodeUserFromToken)
+router.put('/:id', orderCtrl.fulfill)
 router.post('/', orderCtrl.create)
 router.get('/', orderCtrl.index)
 router.get('/:id', orderCtrl.show)
