@@ -10,6 +10,7 @@ router.put('/:id', orderCtrl.fulfill)
 router.post('/', orderCtrl.create)
 router.get('/', orderCtrl.index)
 router.get('/:id', orderCtrl.show)
+router.delete('/:id', orderCtrl.delete)
 
 export {
   router

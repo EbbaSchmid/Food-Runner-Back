@@ -52,8 +52,19 @@ function fulfill(req, res) {
     req.params.id,
     {isFulfilled: true},
     { new: true })
-  .then(order => {r
+  .then(order => {
     res.json(order)
+  })
+  .catch(err => {
+    console.log(err)
+    res.json(err)
+  })
+}
+
+function deleteCart(req, res) {
+  Order.findByIdAndDelete(req.params.id)
+  .then(deletedOrder => {
+    res.json(deletedOrder)
   })
   .catch(err => {
     console.log(err)
@@ -65,5 +76,6 @@ export {
   create,
   show,
   index,
-  fulfill
+  fulfill,
+  deleteCart as delete,
 }
